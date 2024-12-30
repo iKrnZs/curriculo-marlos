@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>
+        Portifólio
+    </title>
+    <script src="https://kit.fontawesome.com/1d79f0ac68.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="playpause.css" />
+    
+    <style>
+        body{ 
+            width: 100%;
+            overflow-x: hidden;
+            background-color: #355743;}
+        .icone{
+            z-index: 4;
+            position: relative;
+            border-radius: 25%;
+            height: 150px;
+            width: 150px;
+            object-fit: cover;
+            object-position: 20% 20%;
+            padding-left: 20px;
+            animation: fadein0 6s linear;
+        }
+        @keyframes fadein1{
+            0%{opacity: 0%;}
+            100%{opacity: 30%;}}
+
+         @keyframes fadein0{
+            0%{opacity: 0%;top: -100px}
+            50%{opacity: 5%;}
+            100%{opacity: 100%;top: 0}
+        }
+        @keyframes fadein{
+            from{opacity: 0%; height: 500px; width: 500px}
+        }
+        .circulo1{
+            position: relative;
+            top: -320px;
+            left: -200px;
+            background-color: #1e2d24;
+            height: 400px;
+            width: 400px;
+            border-radius: 200%;
+            animation: fadein 6s linear;
+        }
+        .nome{
+            position: relative;
+            color: #e1dbdf;
+            font-family: "Product Sans";
+            font-size: 344%;
+            top: -560px;
+            left: 230px;
+            padding-right: 20%;
+        }
+        .subtexto{
+            position: relative;
+            color: #17201a;
+            font-family: "Product Sans";
+            font-size: 70%;
+            top: -42px;
+            left: -11px;
+            padding-right: 20%;
+        }
+        .skilllogo{
+            
+            width: 150px;
+            height: 150px;
+            position: relative;
+            top: 170px;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+        .skills {
+            position: absolute;
+            display: flex;
+            color: #e1dbdf;
+            font-family:"Dancing Script", "Product Sans";
+            font-size: 200%;
+            top: -195px;}
+            
+            .square{
+            position: relative;
+            display: inline-block;
+            height: 500px;
+            width: 400px;
+            border-radius: 10%;
+            margin: 10px;
+            top: 35%;
+            color: #1e2d24;
+            animation: aparecer 2s forwards;
+        }
+            @keyframes fade{
+                0%{opacity: 0%; left: 10%;}
+                100%{opacity: 100%; left: 0%}
+            }
+          @keyframes aparecer{
+            0%{
+            }
+            100%{
+                background-color: #1e2d24;
+            }
+          }
+          .abola{position: fixed; left: 60%; top: 30%; z-index: -1; animation: fadein1 10s; opacity: 30%;}
+          .next{
+            border-radius: 100%;
+            background-color: #e1dbdf;
+            height: 200px;
+            width: 200px;
+            position: absolute;
+            left: -95px;
+            top: 40%;
+            border: none;
+            animation: opacity 3s;
+          }
+          @keyframes left{from{right: -110vw}}
+
+          .back2{background-color: #e1dbdf; height: 100%; width: 100%; position: fixed; justify-content: center; align-items: center; top: 0; z-index:2; right:-100vw;}
+          @keyframes leftback{from{right:-100vw}to{right: 0vw;} }
+
+          @keyframes opacity{from{opacity: 0%;}50%{opacity: 0%;}100%{opacity: 100%;}}
+          
+    </style>
+
+</head>
+<body id="body">
+    <h1 style="display:block;">
+        <div><img src="lAlaQ9k.png"  class="icone" id="icone"></div>
+        <div class="circulo1"></div>
+        <div class="circle">
+            <button onclick="togglePlay()" class="circle-btn">
+            <ion-icon name="play" class="play visibility"></ion-icon>
+            <ion-icon name="pause" class="pause"></ion-icon>
+            </button>
+        </div>
+    </h1>
+    <div  id="back" class="back2">
+        <button id="next" class="next" onclick="next()"><img src="output-onlinepngtools (2).png" width="70px" height="70px" style="position: absolute; top:32%; left: 12px"></button></div>
+    <div>
+        <div class="nome">Marlos Vinicius Souza Silva
+        <p class="subtexto">Análise e Desenvolvimento de Sistemas.</p>
+        <p class="subtexto" id="teste"></p>
+
+        <div  style="display: block; position: relative; top: 10px; right: 0vw; margin-right: 3%">
+            
+            <div style=" animation: fade 2.5s; height: 20px; position: relative">
+                <div class="square" id="Almoxarife">
+                    <p class="skills" >Skills:</p>
+                    <iframe id="iframe0" src="Almoxarife.html" frameborder="0" width="400px" height="450px" style="position: relative; top: 12px;"></iframe>
+                </div>
+                <div class="square" id="ADS">
+                    <iframe id="iframe1"  src="Almoxarife.html" frameborder="0" width="400px" height="450px" style="position: relative; top: 10px;"></iframe>
+                </div>
+                <div class="square" id="Comunicação">
+                    <iframe id="iframe2" src="Almoxarife.html" frameborder="0" width="400px" height="450px" style="position: relative; top: 10px;"></iframe>
+                    <div class="abola"><img src="target.png" width="1000px" ></div>
+                </div>
+                <audio controls autoplay id="aud" src="Macintosh plus 420 (instrumental_ no vocals) extended - LaserStorm1000.mp3" controls: hidden></audio>
+
+            </div>
+        <script>
+            for(let i = 0; i < document.getElementsByClassName("square").length; i++){
+            const titulo = document.getElementsByClassName("square")[i]
+            const iframe = document.getElementById("iframe" + i)
+            iframe.onload = function(){
+            const DocumentoIframe = iframe.contentDocument
+            const id = DocumentoIframe.getElementById("titulo")
+            id.innerText = (i+1)+". " +titulo.id;
+            const paragrafo = DocumentoIframe.getElementById(i)
+            paragrafo.style.display="flex"
+        }}
+        </script>
+    </div>
+    <div style="right: 50%; position: absolute; align-items: center; justify-content: center;  user-select: none; pointer-events: none;">
+        <div id="text2" style="z-index: 5;position: relative; opacity:0%; color:black; left:3px">150 no pix libero o resto.</div>
+        <div style="position: relative; left: 9%"><img src="1d85047a296119b1e789d7095a80fc02.jpg" id="dog" width= 460px style="opacity: 0%;z-index: 5;position: relative;"></div>
+    </div>
+
+
+
+    <script>function next(){
+        const part2 = document.getElementById("back")
+        const anima = part2.style.animation="leftback 1s ease-in forwards"
+        const t2 = document.getElementById("text2")
+        const dog = document.getElementById("dog")
+        part2.addEventListener("animationend", function(){
+            t2.style.animation="opacity 2s forwards"
+            dog.style.animation="opacity 7s forwards"
+        })}</script>
+    <script>let vid = document.getElementById("aud");
+        vid.volume = 0.1;
+        function togglePlay(){
+            return vid.paused ? vid.play() : vid.pause()}
+        </script>
+    <script src="index.js"></script>
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    
+</body>
+</html>
